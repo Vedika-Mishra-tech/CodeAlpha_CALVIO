@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: lightblue;
+}
+.calculator {
+    width: 100%;
+    max-width: 340px;
+    padding: 22px;
+    border-radius: 22px;
+    background: #333D35;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22);
+}
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 22px;
+}
+.display{
+    min-height: 82px;
+    margin-bottom: 18px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f5f1e8;
+}
+#previousNumber {
+    width: 100%;
+    color: #172033;
+    text-align: right;
+    font-size: bold;
+    overflow: hidden;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+button {
+    min-height: 58px;
+    border: none;
+    border-radius: 12px;
+    background: #515d50;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button:hover {
+    background: #475569;
+}
+button:active {
+    transform: scale(0.96);
+}
+.operator {
+    background: #a7b49a;
+}
+.operator:hover {
+    background: #6d28d9;
+}
+.clear {
+    background: #dc5252;
+}
+.clear:hover {
+    background: #c83f3f;
+}
+.equal {
+    grid-row: span 2;
+    background: #c58b62;
+}
+.equal:hover {
+    background: #0f766e;
+}
+.zero {
+    grid-column: span 2;
+}
+.hint {
+    color: #cbd5e1;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+}
+@media (max-width: 380px) {
+    .calculator {
+        padding: 16px;
+    }
+    button {
+        min-height: 54px
+    }
+}
